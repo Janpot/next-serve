@@ -1,9 +1,15 @@
 workflow "Run tests" {
   on = "push"
-  resolves = ["Run npm test"]
+  resolves = ["GitHub Action for npm"]
 }
 
-action "Run npm test" {
+action "run npm ci" {
   uses = "actions/npm@master"
+  args = "ci"
+}
+
+action "GitHub Action for npm" {
+  uses = "actions/npm@master"
+  needs = ["run npm ci"]
   args = "test"
 }
