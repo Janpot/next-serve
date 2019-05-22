@@ -1,0 +1,49 @@
+{
+  "name": "next-serve",
+  "version": "1.0.0",
+  "description": "Web-style abstraction to create serverless handlers",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc",
+    "test": "jest",
+    "format": "prettier --write --single-quote \"**/*{.js,.ts,.jsx,.tsx}\""
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testRegex": "^.+\\.spec\\.ts$"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Janpot/next-serve.git"
+  },
+  "author": "Jan Potoms",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Janpot/next-serve/issues"
+  },
+  "homepage": "https://github.com/Janpot/next-serve#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.2",
+    "@types/node-fetch": "^2.3.4",
+    "get-port": "^5.0.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.17.1",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
