@@ -1,7 +1,7 @@
 {
   "name": "next-serve",
   "version": "1.0.0",
-  "description": "Web-style abstraction to create serverless handlers",
+  "description": "fetch based abstraction for serverless request handlers",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
@@ -13,12 +13,7 @@
   "jest": {
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
-    },
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "testRegex": "^.+\\.spec\\.ts$"
+    }
   },
   "files": [
     "lib"

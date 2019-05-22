@@ -6,8 +6,6 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { createHandler } from './test-utils';
 
-import middelware from './examples/middleware';
-
 describe('serve', () => {
   it('handles basic requests', async () => {
     const { port } = await createHandler(
