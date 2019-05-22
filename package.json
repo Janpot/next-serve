@@ -8,7 +8,7 @@
     "prepare": "npm run build",
     "build": "tsc",
     "test": "jest",
-    "format": "prettier --write --single-quote \"**/*{.js,.ts,.jsx,.tsx}\""
+    "format": "prettier --write --single-quote \"src/**/*{.js,.ts,.jsx,.tsx}\""
   },
   "jest": {
     "transform": {
