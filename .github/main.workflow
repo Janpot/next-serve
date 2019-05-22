@@ -3,12 +3,12 @@ workflow "Run tests" {
   resolves = ["GitHub Action for npm"]
 }
 
-action "run npm ci" {
+action "npm ci" {
   uses = "actions/npm@master"
   args = "ci"
 }
 
-action "GitHub Action for npm" {
+action "npm test" {
   uses = "actions/npm@master"
   needs = ["run npm ci"]
   args = "test"
