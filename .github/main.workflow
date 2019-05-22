@@ -1,6 +1,6 @@
 workflow "Run tests" {
   on = "push"
-  resolves = ["GitHub Action for npm"]
+  resolves = ["npm publish"]
 }
 
 action "npm ci" {
@@ -14,13 +14,15 @@ action "npm test" {
   args = "test"
 }
 
-action "Filters for GitHub Actions" {
+action "Only on master" {
   uses = "actions/bin/filter@master"
   needs = ["npm test"]
   args = "branch master"
 }
 
-action "GitHub Action for npm" {
+action "npm publish" {
   uses = "actions/npm@master"
-  needs = ["Filters for GitHub Actions"]
+  needs = ["Only on master"]
+  args = "publish"
+  secrets = ["NPM_AUTH_TOKEN"]
 }
