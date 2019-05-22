@@ -1,6 +1,6 @@
 workflow "Run tests" {
   on = "push"
-  resolves = ["GitHub Action for npm"]
+  resolves = ["npm test"]
 }
 
 action "npm ci" {
@@ -10,6 +10,6 @@ action "npm ci" {
 
 action "npm test" {
   uses = "actions/npm@master"
-  needs = ["run npm ci"]
+  needs = ["npm ci"]
   args = "test"
 }
