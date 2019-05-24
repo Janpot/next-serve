@@ -1,7 +1,7 @@
 # next-serve
 
 Create http handlers using `fetch` primitives.
-Takes a request listener, defined in the primitives of the `fetch` API, and returns a clasic node.js request listener for it. It's targetted at Zeit now functions, but can also be used with plain `http` or `express`.
+Takes a request listener, defined in the primitives of the `fetch` API, and returns a classic node.js request listener for it. It's targetted at Zeit now functions, but can also be used with plain `http` or `express`.
 
 ## Installation:
 
